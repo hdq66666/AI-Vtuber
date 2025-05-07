@@ -1339,7 +1339,10 @@ class Audio:
             if not matches or len(matches) == 0:
                 return False
 
+            content_copy = copy.copy(message["content"])
             message["content"] = matches[0]
+        else:
+            content_copy = copy.copy(message["content"])
 
         content_copy = copy.copy(message["content"])
 
