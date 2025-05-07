@@ -1341,9 +1341,8 @@ class Audio:
 
             content_copy = copy.copy(message["content"])
             message["content"] = matches[0]
-        else:
-            content_copy = copy.copy(message["content"])
-        
+
+        content_copy = copy.copy(message["content"])
 
         logger.info(f"即将合成音频，message={message}")
         resp_json = await self.tts_handle(message)
